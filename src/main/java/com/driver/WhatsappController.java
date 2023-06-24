@@ -49,7 +49,7 @@ public class WhatsappController {
         // The 'i^th' created message has message id 'i'.
         // Return the message id.
 
-        return whatsappService.createMessage(content);
+        return whatsappService.createMessage(content).getId();
     }
 
     @PutMapping("/send-message")
