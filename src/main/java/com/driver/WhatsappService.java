@@ -21,6 +21,7 @@ public class WhatsappService {
         if(users.size() > 2){
             User admin = users.get(0);
             int grpId = whatsappRepository.getGroupCount() + 1;
+            whatsappRepository.setGroupCount(grpId);
             String name = "Group " + grpId;
             Group group = new Group(name, users.size());
             whatsappRepository.createGroup(admin, group, users);
